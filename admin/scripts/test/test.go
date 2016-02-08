@@ -4,6 +4,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	ringpop "github.com/uber/ringpop-go/admin"
 	"github.com/uber/tchannel-go"
 )
@@ -21,6 +22,5 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	//spew.Dump(checksum)
-	println(stats.RingChecksum())
+	spew.Dump(stats)
 }
